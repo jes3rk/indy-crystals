@@ -10,16 +10,15 @@ var pScore = 0;
 
 // Declare functions
 
-function randomNum(va, max, min) {
-  va = Math.floor(Math.random() * max) + min;
-}
-
-function crystalValue(cryV) {
-  randomNum(cryV, 12, 1);
+function crystalValueGen() {
+  cry1V = Math.floor(Math.random() * 12) + 1;
+  cry2V = Math.floor(Math.random() * 12) + 1;
+  cry3V = Math.floor(Math.random() * 12) + 1;
+  cry4V = Math.floor(Math.random() * 12) + 1;
 }
 
 function targetV() {
-  randomNum(pTarget, 120, 19);
+  pTarget = Math.floor(Math.random() * 120) + 19;
 }
 
 function dispPScore() {
@@ -27,10 +26,7 @@ function dispPScore() {
 }
 
 function reset() {
-  crystalValue(cry1V);
-  crystalValue(cry2V);
-  crystalValue(cry3V);
-  crystalValue(cry4V);
+  crystalValueGen();
   targetV();
   pScore = 0;
   $('#player-target').html("Target: " + pTarget);
