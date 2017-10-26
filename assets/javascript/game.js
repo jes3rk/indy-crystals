@@ -1,17 +1,17 @@
 //Declare variables
 
-var cry1V;
-var cry2V;
-var cry3V;
-var cry4V;
+var cry1V = 0;
+var cry2V = 0;
+var cry3V = 0;
+var cry4V = 0;
 
-var pTarget;
-var pScore;
+var pTarget = 0;
+var pScore = 0;
 
 // Declare functions
 
-function randomNum(v, max, min) {
-  v = Math.floor(Math.random() * max) + min;
+function randomNum(va, max, min) {
+  va = Math.floor(Math.random() * max) + min;
 }
 
 function crystalValue(cryV) {
@@ -23,7 +23,7 @@ function targetV() {
 }
 
 function dispPScore() {
-  $('player-score').html("Player Score: " + pScore);
+  $('#player-score').html("Player Score: " + pScore);
 }
 
 function reset() {
@@ -32,36 +32,40 @@ function reset() {
   crystalValue(cry3V);
   crystalValue(cry4V);
   targetV();
-  $('player-target').html("Target: " + pTarget);
   pScore = 0;
+  $('#player-target').html("Target: " + pTarget);
+  dispPScore();
 }
 
 // Gameplay
 
 $(document).ready(function() {
 
-  $('btn-start').on('click', function() {
+  $('#btn-start').on('click', function() {
     reset();
-    console.log("btn");
   });
 
-  $('cry1').on('click', function() {
+  $('#cry1').on('click', function() {
     pScore = pScore + cry1V;
+    console.log("btn1");
     dispPScore();
   });
 
-  $('cry2').on('click', function() {
+  $('#cry2').on('click', function() {
     pScore = pScore + cry2V;
+    console.log("btn2");
     dispPScore();
   });
 
-  $('cry3').on('click', function() {
+  $('#cry3').on('click', function() {
     pScore = pScore + cry3V;
+    console.log("btn3");
     dispPScore();
   });
 
-  $('cry4').on('click', function() {
+  $('#cry4').on('click', function() {
     pScore = pScore + cry4V;
+    console.log("btn4");
     dispPScore();
   });
 
