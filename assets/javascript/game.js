@@ -8,6 +8,9 @@ var cry4V = 0;
 var pTarget = 0;
 var pScore = 0;
 
+var winCount = 0;
+var loseCount = 0;
+
 // Declare functions
 
 function crystalValueGen() {
@@ -23,6 +26,8 @@ function targetV() {
 
 function dispPScore() {
   $('#player-score').html("Player Score: " + pScore);
+  $('#win-counter').html("Wins: " + winCount);
+  $('#lose-counter').html("Losses: " + loseCount);
 }
 
 function reset() {
@@ -30,6 +35,21 @@ function reset() {
   targetV();
   pScore = 0;
   $('#player-target').html("Target: " + pTarget);
+  dispPScore();
+}
+
+function winLoseCheck() {
+  if (pScore === pTarget) {
+  // Win condition
+    alert("you win");
+    reset();
+    winCount++;
+  } else if (pScore > pTarget) {
+  // Lose condition
+    alert("you lost, your score was too high");
+    reset();
+    loseCount++;
+  };
   dispPScore();
 }
 
@@ -43,27 +63,26 @@ $(document).ready(function() {
 
   $('#cry1').on('click', function() {
     pScore = pScore + cry1V;
-    console.log("btn1");
     dispPScore();
+    winLoseCheck();
   });
 
   $('#cry2').on('click', function() {
     pScore = pScore + cry2V;
-    console.log("btn2");
     dispPScore();
+    winLoseCheck();
   });
 
   $('#cry3').on('click', function() {
     pScore = pScore + cry3V;
-    console.log("btn3");
     dispPScore();
+    winLoseCheck();
   });
 
   $('#cry4').on('click', function() {
     pScore = pScore + cry4V;
-    console.log("btn4");
     dispPScore();
+    winLoseCheck();
   });
-
 
 })

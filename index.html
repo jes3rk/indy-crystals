@@ -8,6 +8,7 @@
     <script type="text/javascript" src="./assets/javascript/game.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Special+Elite" rel="stylesheet">
   </head>
   <body>
 <!-- Global Container -->
@@ -17,10 +18,12 @@
 <!-- Jumbotron column -->
         <div class="col-md-12">
           <div class="jumbotron">
-            <h1 class="display-3">Indiana Jones: Crytstal Collector</h1>
-            <p class="lead">Indiana Jones is in a pickle! In order to "liberate" the holy crystals of some lost civilization from this ancient temple, he must solve their devious puzzle and you can help!</p>
+            <div class="mini-jumbo">
+              <h1 class="display-3">Indiana Jones: Crytstal Collector</h1>
+              <p class="lead">Indiana Jones is in a pickle! In order to "liberate" the holy crystals of some lost civilization from this ancient temple, he must solve their devious puzzle and you can help!</p>
+            </div>
             <hr class="my-4">
-            <p>In order to help, you must correctly line up your score with the number generated at the top. Press the sacred puzzle crystals below to change your score but be warned, they may not do what you expect them to do!</p>
+            <p class="sub-title">In order to help, you must correctly line up your score with the number generated at the top. Press the sacred puzzle crystals below to change your score but be warned, they may not do what you expect them to do!</p>
             <p class="lead">
               <a id="btn-start" class="btn btn-primary btn-lg" href="#" role="button">Begin!</a>
             </p>
@@ -32,28 +35,42 @@
 <!-- Column 1 -->
         <div class="col-md-4">
           <div class="row">
-            <img id="cry1" src="./assets/images/cry_blue.png" alt="Blue Gem">
+            <img id="cry1" class="gem-img" src="./assets/images/cry_blue.png" alt="Blue Gem">
           </div>
           <div class="row">
-            <img id="cry2" src="./assets/images/cry_gold.png" alt="Gold Gem">
+            <img id="cry2" class="gem-img" src="./assets/images/cry_gold.png" alt="Gold Gem">
           </div>
         </div> <!-- Close column 1 -->
 <!-- Column 2 -->
-        <div class="col-md-4">
-          <div class="score-board">
-            <p id="player-target"></p>
-          </div>
-          <div class="score-board">
-            <p id="player-score"></p>
-          </div>
+        <div class="col-md-4 middle">
+<!-- Column 2 Row 1 -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="score-board">
+                <p id="player-target"></p>
+              </div>
+              <div class="score-board">
+                <p id="player-score"></p>
+              </div>
+            </div>
+          </div> <!-- Close Column 2 Row 1 -->
+<!-- Column 2 Row 2 -->
+          <div class="row score-board">
+            <div class="col-md-6">
+              <p id="win-counter"></p>
+            </div>
+            <div class="col-md-6">
+              <p id="lose-counter"></p>
+            </div>
+          </div> <!-- Close Column 2 Row 2 -->
         </div> <!-- Close column 2 -->
 <!-- Column 3 -->
         <div class="col-md-4">
           <div class="row">
-            <img id="cry3" src="./assets/images/cry_purple.png" alt="Purple Gem">
+            <img id="cry3" class="gem-img" src="./assets/images/cry_purple.png" alt="Purple Gem">
           </div>
           <div class="row">
-            <img id="cry4" src="./assets/images/cry_red.png" alt="Red Gem">
+            <img id="cry4" class="gem-img" src="./assets/images/cry_red.png" alt="Red Gem">
           </div>
         </div> <!-- Close column 3 -->
       </div> <!-- Close Game Row -->

@@ -1,0 +1,33 @@
+.jumbotron {
+
+}
+
+.gem-img {
+  width: 40%;
+  height: 40%;
+  margin: auto;
+  margin-bottom: 25px;
+
+}
+
+body {
+  background-image: url(../images/indy_background.jpg);
+}
+
+.display-3, .score-board {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 2px;
+}
+
+.lead, .sub-title {
+  font-family: 'Special Elite', cursive;
+}
+
+.middle {
+  background-color: ;
+}
+
+.score-board {
+  font-size: 24px;
+  text-align: center;
+}
