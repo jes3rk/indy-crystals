@@ -40,7 +40,7 @@ function reset() {
   dispPScore();
   setTimeout(function() {
     $('.card-img-top').attr("src", "./assets/images/indy_pensive.gif");
-    $('#announce').text("");
+    $('#announce').text("Choose Carefully!");
   }, 5200);
 }
 
@@ -79,8 +79,26 @@ $(document).ready(function() {
 
   $('#btn-start').on('click', function() {
     $('.card-img-top').attr("src", "./assets/images/indy_pensive.gif");
-    $('.middle').css("opacity", "1");
+    $('.middle').animate({
+      opacity: '1'
+    });
     reset();
+    $('#cry1').animate({
+      opacity: '1'
+    });
+    $('#cry2').animate({
+      opacity: '1'
+    });
+    $('#cry3').animate({
+      opacity: '1'
+    });
+    $('#cry4').animate({
+      opacity: '1'
+    });
+    $('#jumbo-img').animate({
+      opacity: '0',
+      height: '0px'
+    })
   });
 
   $('#cry1').on('click', function() {
