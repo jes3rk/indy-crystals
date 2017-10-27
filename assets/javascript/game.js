@@ -11,6 +11,8 @@ var pScore = 0;
 var winCount = 0;
 var loseCount = 0;
 
+var announcement = $('#announcement')
+
 // Declare functions
 
 function crystalValueGen() {
