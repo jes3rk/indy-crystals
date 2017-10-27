@@ -38,18 +38,36 @@ function reset() {
   pScore = 0;
   $('#player-target').html("Target: " + pTarget);
   dispPScore();
+  setTimeout(function() {
+    $('.card-img-top').attr("src", "./assets/images/indy_pensive.gif");
+    $('#announce').text("");
+  }, 5200);
+}
+
+function win() {
+  $('#win-lose').css({"opacity":"1"});
+  $('#announce').text("You Win!");
+  $('.card-img-top').attr("src", "./assets/images/indy_happy.gif");
+}
+
+function lose() {
+  $('#win-lose').css({"opacity":"1"});
+  $('#announce').text("You Lose!");
+  $('.card-img-top').attr("src", "./assets/images/face_melting.webp")
 }
 
 function winLoseCheck() {
   if (pScore === pTarget) {
   // Win condition
-    alert("you win");
+  //  alert("you win");
     reset();
+    win();
     winCount++;
   } else if (pScore > pTarget) {
   // Lose condition
-    alert("you lost, your score was too high");
+  //  alert("you lost, your score was too high");
     reset();
+    lose();
     loseCount++;
   };
   dispPScore();
@@ -60,6 +78,8 @@ function winLoseCheck() {
 $(document).ready(function() {
 
   $('#btn-start').on('click', function() {
+    $('.card-img-top').attr("src", "./assets/images/indy_pensive.gif");
+    $('.middle').css("opacity", "1");
     reset();
   });
 
@@ -86,5 +106,4 @@ $(document).ready(function() {
     dispPScore();
     winLoseCheck();
   });
-
 })
