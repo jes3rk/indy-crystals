@@ -59,13 +59,11 @@ function lose() {
 function winLoseCheck() {
   if (pScore === pTarget) {
   // Win condition
-  //  alert("you win");
     reset();
     win();
     winCount++;
   } else if (pScore > pTarget) {
   // Lose condition
-  //  alert("you lost, your score was too high");
     reset();
     lose();
     loseCount++;
