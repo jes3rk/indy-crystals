@@ -1,4 +1,4 @@
-# week-4-game
+# Indy Crystals
 
 A crystal collector game where the user is presented with a target score and four crystals, each with a specific, random value that the user can press to reach the target score. As the game involes crystals, an Indiana Jones theme seemed appropriate. Useful as an excerxise in alogrithms and game logic.
 
